@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <SCRIPT> 
+        function calc( theForm )
+        {
+            var result = eval( theForm.expression.value);
+            // put result into form field 'answer' 
+            theForm.answer.value = result;
+        }
+    </SCRIPT>
+</head>
+<body>
+    <FORM>
+        
+        Calculation: <INPUT TYPE=text NAME=expression SIZE=15><br> 
+        Result: <INPUT TYPE=text NAME=answer SIZE=15><br>
+        <INPUT TYPE=button VALUE="Click for answer" 
+        onClick="calc(this.form)">
+        <INPUT TYPE=reset VALUE="Clear">   
+    </FORM>  
+</body>
+</html>
